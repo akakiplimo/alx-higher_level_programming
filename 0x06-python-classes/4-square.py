@@ -1,7 +1,12 @@
 #!/usr/bin/python3
+
+"""Defines a Square"""
+
+
 class Square:
-    """defines a square"""
+    """Represents a square"""
     def __init__(self, size=0):
+        """Initializes square with attribute size"""
         self.__size = size
 
     @property
