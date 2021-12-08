@@ -1,7 +1,12 @@
 #!/usr/bin/python3
+
+"""Defines a square"""
+
+
 class Square:
-    """defines a square"""
+    """Represents a square"""
     def __init__(self, size=0):
+        """Initializes a sqaure with size attribute"""
         self.__size = size
 
     @property
@@ -29,6 +34,3 @@ class Square:
             print("")
         if self.__size == 0:
             print("")
-            
-
-    
