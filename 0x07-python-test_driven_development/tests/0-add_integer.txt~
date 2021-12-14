@@ -1,0 +1,52 @@
+The ``0-add_integer.py`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+Importing the function from the module:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Check for module docstring:
+    >>> m = __import__('0-add_integer').__doc__
+    >>> len(m) > 1
+    True
+
+Check for function docstring:
+    >>> f = __import__('0-add_integer').add_integer.__doc__
+    >>>	len(f) > 1      
+    True
+
+Checking for regular addition with positive integers:
+    >>> add_integer(4, 6)
+    10
+
+Checking for addition of negative and positive integers:
+    >>> add_integer(-2, 6)
+    4
+
+Checking for addition of positive and negative integers:
+    >>> add_integer(9, -5)
+    4
+
+Checking for addition of two negative integers:
+    >>> add_integer(-2, -6)
+    -8
+
+Checking for addition of a float and int:
+    >>> add_integer(2.55, 6)
+    8
+
+Checking for addition of an int and float:
+    >>> add_integer(7, 3.27)
+    10
+
+Checking no args:
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Checking one arg:
+    >>> add_integer(1)
+    99
