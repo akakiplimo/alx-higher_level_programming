@@ -1,0 +1,63 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+Importing the function from the module:
+	  >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Checking for the module docstring:
+	 >>> m = __import__('5-text_indentation').__doc__
+	 >>> len(m) > 1
+	 True
+
+Checking for the function docstring:
+	  >>> f = __import__('5-text_indentation').text_indentation.__doc__
+	  >>> len(f) > 1
+	  True
+
+Check for empty function:
+      >>> text_indentation()
+      Traceback (most recent call last):
+      ...
+      TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Check for input None:
+      >>> text_indentation(None)
+      Traceback (most recent call last):
+      ...
+      TypeError: text must be a string
+
+Check for non-string input:
+      >>> text_indentation(24)
+      Traceback (most recent call last):
+      ...
+      TypeError: text must be a string
+
+Check for too many arguments input:
+      >>> text_indentation("Jambo", "Dunia")
+      Traceback (most recent call last):
+      ...
+      TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+Check for ending with non-special character:
+      >>> text_indentation("Jambo Dunia. Maisha hii ni mafupi: furahia")
+      Jambo Dunia.
+      <BLANKLINE>
+      Maisha hii ni mafupi:
+      <BLANKLINE>
+      furahia
+
+Check for ending with a special character:
+      >>> text_indentation("Jambo Dunia. Maisha hii ni mafupi: furahia?")
+      Jambo Dunia.
+      <BLANKLINE>
+      Maisha hii ni mafupi:
+      <BLANKLINE>
+      furahia?
+      <BLANKLINE>
+
+Checking for one word:
+	 >>> text_indentation("Hello")
+	 Hello
