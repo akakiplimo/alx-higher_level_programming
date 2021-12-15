@@ -1,6 +1,13 @@
 #!/usr/bin/python3
+"""
+4-rectangle.py
+Adrian A. Kiplimo
+Module that defines a class Rectangle
+"""
+
+
 class Rectangle:
-    """Defines a rectangle"""
+    """Defines a rectangle with properties"""
     def __init__(self, width=0, height=0):
         """initializes the rectangle width and height"""
         self.__width = width

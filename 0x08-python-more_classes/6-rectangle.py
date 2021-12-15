@@ -1,6 +1,13 @@
 #!/usr/bin/python3
+"""
+6-rectangle.py
+Adrian A. Kiplimo
+Module that defines a class Rectangle
+"""
+
+
 class Rectangle:
-    """Defines a rectangle"""
+    """Defines a rectangle with properties"""
 
     number_of_instances = 0
 
