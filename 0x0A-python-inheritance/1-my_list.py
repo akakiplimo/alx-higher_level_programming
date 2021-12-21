@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Defines MyList Class"""
+
+
 class MyList(list):
     """A subclass of list"""
     def __init__(self):
