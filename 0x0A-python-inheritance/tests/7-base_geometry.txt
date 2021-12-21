@@ -1,0 +1,26 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+Importing a function from the module:
+	  >>>BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Checking for module docstring:
+	 >>> m = __import__('7-base_geometry').__doc
+	 >>> len(m) > 1
+	 True
+
+Checking for class docstring:
+	  >>> c = __import__('7-base_geometry').BaseGeometry.__doc
+	  >>> len(c) > 1
+	  True
+
+Checking for method docstring:
+          >>> meth1 = __import__('7-base_geometry').BaseGeometry.area.__doc
+          >>> len(meth1) > 1
+          True
+	  >>> meth2 = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc
+          >>> len(meth2) > 1
+          True
