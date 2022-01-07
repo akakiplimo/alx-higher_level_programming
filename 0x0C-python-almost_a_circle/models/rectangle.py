@@ -88,7 +88,7 @@ class Rectangle(Base):
                                                                  self.width,
                                                                  self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ updates multiple rectangle variables"""
         if len(args):
             for i, arg in enumerate(args):
@@ -102,3 +102,14 @@ class Rectangle(Base):
                     self.x = arg
                 elif i == 4:
                     self.y = arg
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
