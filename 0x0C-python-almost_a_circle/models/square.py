@@ -31,6 +31,7 @@ class Square(Rectangle):
                                                          self.width)
 
     def update(self, *args, **kwargs):
+        """ updates multiple attributes of the Square """
         if len(args):
             for i, arg in enumerate(args):
                 if i == 0:
