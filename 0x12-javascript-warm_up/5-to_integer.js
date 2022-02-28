@@ -3,5 +3,5 @@ const arg = process.argv[2];
 if (isNaN(arg)) {
   console.log('Not a number');
 } else {
-  console.log('My Number: ' + parseInt(arg));
+  console.log('My Number: ' + arg);
 }
