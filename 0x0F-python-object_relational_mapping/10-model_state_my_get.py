@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-script that lists all State objects that contain the letter a from the database hbtn_0e_6_usa
+script that lists all State object with the name passed as argument from the database hbtn_0e_6_usa
 """
 
 from sqlalchemy import create_engine
