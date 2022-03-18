@@ -18,8 +18,9 @@ def find_peak(list_of_integers):
         mid = (left + right) // 2
 
         # check if the middle element is greater than its neighbors
-        if ((mid == 0 or list_of_integers[mid - 1] <= list_of_integers[mid]) and
-                (mid == len(list_of_integers) - 1 or list_of_integers[mid + 1] <= list_of_integers[mid])):
+        if ((mid == 0 or list_of_integers[mid - 1] <= list_of_integers[mid]) 
+            and (mid == len(list_of_integers) - 1
+            or list_of_integers[mid + 1] <= list_of_integers[mid])):
             return list_of_integers[mid]
 
         # If the left neighbor of `mid` is greater than the middle element,
@@ -32,4 +33,3 @@ def find_peak(list_of_integers):
         return recursive(list_of_integers, mid + 1, right)
 
     return recursive(list_of_integers)
-    
