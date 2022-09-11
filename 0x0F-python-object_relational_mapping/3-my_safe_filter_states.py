@@ -39,3 +39,6 @@ if __name__ == '__main__':
     # showing all the states one by one
     for state in all_states:
         print(state)
+
+    cursor.close()
+    db.close()
