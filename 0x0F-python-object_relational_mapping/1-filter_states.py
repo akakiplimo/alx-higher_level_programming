@@ -21,6 +21,7 @@ if __name__ == '__main__':
         user=mysql_username,
         passwd=mysql_password,
         database=database_name,
+        charset="utf8"
     )
 
     # creating an instance of 'cursor' class which is used to execute
