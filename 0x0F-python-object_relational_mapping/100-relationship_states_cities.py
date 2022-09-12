@@ -12,15 +12,22 @@ from relationship_state import Base, State
 from relationship_city import City
 
 
-if __name__ == "__main__": 
-    db_engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
-                              (sys.argv[1], sys.argv[2], sys.argv[3]),
-                              pool_pre_ping=True)
-    Base.metadata.create_all(db_engine)
-    start = sessionmaker()
-    start.configure(bind=db_engine)
-    session = start()
-    stmt = State(name="California", cities=[City(name="San Francisco")])
-    session.add(stmt)
+if __name__ == "__main__":
+    # required arguments
+    mysql_username = argv[1]
+    mysql_password = argv[2]
+    database_name = argv[3]
+
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
+                           (mysql_username, mysql_password, database_name),
+                           pool_pre_ping=True)
+
+    Base.metadata.create_all(engine)
+
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    new_state_city = State(name="California",
+                           cities=[City(name="San Francisco")])
+    session.add(new_state_city)
     session.commit()
     session.close()
